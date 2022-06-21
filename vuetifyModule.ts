@@ -5,14 +5,12 @@ import type { UserConfig } from 'vite';
 export default defineNuxtModule({
   async setup(_, nuxt) {
     nuxt.options.build.transpile.push('vuetify');
-    nuxt.options.css.unshift('vuetify/lib/styles/main.sass');
 
     nuxt.hook('vite:extendConfig', (config: UserConfig) => {
       config.plugins = [
         ...(config.plugins || []),
         vuetify({
-          // COMMENT this line and errors will disappear
-          styles: 'sass',
+          styles: 'expose',
         }),
       ];
 
