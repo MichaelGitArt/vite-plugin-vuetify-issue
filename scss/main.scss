@@ -1,12 +1,11 @@
-// main.scss
 @use 'vuetify/styles'  with (
   $color-pack: false,
   $utilities: false,
-  $typography:
-    (
-      'button': (
-        'size': 2rem,
-        'weight': 300,
-      ),
+  $typography: (
+    'button': (
+      'size': 2rem,
+      'weight': 300,
     ),
+  ),
+  $button-border-radius: 28px,
 );
